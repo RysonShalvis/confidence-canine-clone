@@ -43,6 +43,12 @@
     width: 100%;
     font-size: $largeTextFont;
 
+    .left-side-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
+
     .logo-container {
       background-color: black;
       height: 340px;

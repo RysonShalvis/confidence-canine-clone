@@ -21,7 +21,7 @@ function HomePage() {
       </div>
 
       <div className='main-content'>
-        <div>
+        <div className='left-side-logo'>
             <h2>OWNER CONFIDENCE</h2>
             <h2>LEADERSHIP</h2>
         </div>
