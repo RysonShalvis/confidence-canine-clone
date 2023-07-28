@@ -1,1 +1,10 @@
-$mainColor: red;
+@import 'variables';
+
+.app {
+  h1,
+  h2,
+  p {
+    margin: $spacing;
+  }
+
+}

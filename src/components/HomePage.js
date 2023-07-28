@@ -11,6 +11,8 @@ function HomePage() {
         <video muted autoPlay loop src={backgroundVideo}/>
       </div>
 
+      <div className='background-gradient'></div>
+
       <div className='side-nav'>
         <h2>TRAINING</h2>
         <h2>PROGRAM</h2>
