@@ -2,7 +2,36 @@
 
 .section {
   position: relative;
-  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
   width: 100%;
   background-color: $backgroundColor;
+  color: $secondaryColor;
+
+  .section-quote-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    p {
+      margin-bottom: 48px;
+    }
+
+    p:not(p:last-child) {
+      font-size: $headerFont;
+    }
+
+    p:nth-child(2) {
+      align-self: flex-end;
+      margin-right: 96px;
+    }
+
+    p:last-child {
+      align-self: flex-end;
+      font-size: $subHeaderFont;
+    }
+  }
 }

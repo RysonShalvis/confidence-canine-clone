@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 .app {
   h1,
@@ -7,4 +7,7 @@
     margin: $spacing;
   }
 
+  * {
+    font-family: "Alegreya SC", serif;
+  }
 }
