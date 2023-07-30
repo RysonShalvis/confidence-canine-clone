@@ -2,8 +2,15 @@ import React from "react";
 import backgroundVideo from "../media/dog-wind-homepage.mp4";
 import logo from "../media/canine-logo.jpeg";
 import "../scss/_homepage.scss";
+import { useState } from "react";
 
 function HomePage() {
+  const [navClassNames, setNavClassnames] = useState('');
+
+  const menuOnclick = () => {
+    navClassNames ? setNavClassnames('') : setNavClassnames('display');
+  };
+
   return (
     <div className="homepage">
       <div className="background-video">
@@ -13,10 +20,15 @@ function HomePage() {
       <div className="background-gradient"></div>
 
       <div className="side-nav">
-        <h2>TRAINING</h2>
-        <h2>PROGRAM</h2>
-        <h2>REVIEWS</h2>
-        <h2>CONTACT</h2>
+        <button onClick={menuOnclick} className="hamburger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+        <h2 className={navClassNames}>TRAINING</h2>
+        <h2 className={navClassNames}>PROGRAM</h2>
+        <h2 className={navClassNames}>REVIEWS</h2>
+        <h2 className={navClassNames}>CONTACT</h2>
       </div>
 
       <div className="main-content">

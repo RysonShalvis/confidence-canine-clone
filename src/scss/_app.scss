@@ -1,6 +1,8 @@
 @import "variables";
 
 .app {
+  background-color: $backgroundColor;
+
   h1,
   h2,
   p {

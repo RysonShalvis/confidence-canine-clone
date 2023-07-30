@@ -1,5 +1,5 @@
 $primaryColor: black;
-$secondaryColor: #EEBC27;
+$secondaryColor: #eebc27;
 $backgroundColor: black;
 $textColor: white;
 $spacing: 12px;
@@ -7,3 +7,31 @@ $headerFont: 50px;
 $subHeaderFont: 40px;
 $largeTextFont: 30px;
 $textFont: 20px;
+
+$largeScreenPixel: 1240px;
+$mediumScreenPixel: 700px;
+$smallScreenPixel: 480px;
+
+@mixin largeScreen {
+  @media screen and (min-width: $largeScreenPixel) {
+    @content;
+  }
+}
+
+@mixin mediumScreen {
+  @media screen and (max-width: $largeScreenPixel) {
+    @content;
+  }
+}
+
+@mixin smallScreen {
+  @media screen and (max-width: $mediumScreenPixel) {
+    @content;
+  }
+}
+
+@mixin xsScreen {
+    @media screen and (max-width: $smallScreenPixel) {
+      @content;
+    }
+  }

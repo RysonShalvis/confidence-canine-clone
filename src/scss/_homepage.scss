@@ -9,9 +9,15 @@
     position: absolute;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 
     video {
       width: 100%;
+
+      @include mediumScreen {
+        object-fit: cover;
+        height: 100%;
+      }
     }
   }
 
@@ -29,11 +35,54 @@
   .side-nav {
     position: absolute;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
     font-size: $textFont;
     font-weight: 500;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+
+    @include largeScreen {
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      width: fit-content;
+    }
+
+    .hamburger-menu {
+      display: none;
+      position: relative;
+      height: fit-content;
+      background-color: transparent;
+      border: none;
+      margin: $spacing;
+      z-index: 10;
+
+      @include smallScreen {
+        display: block;
+      }
+
+      > div {
+        height: 4px;
+        width: 28px;
+        margin: 4px;
+        background-color: $secondaryColor;
+        pointer-events: none;
+      }
+    }
+
+    @include smallScreen {
+      flex-direction: column;
+      align-items: end;
+
+      h2 {
+        display: none;
+
+        &.display {
+          display: block;
+        }
+      }
+    }
   }
 
   .main-content {
@@ -63,9 +112,26 @@
       background: black;
       overflow: hidden;
 
+     
+
       img {
         object-position: -5px -5px;
         height: 350px;
+      }
+
+      @include smallScreen {
+        height: 250px;
+        width: 250px;
+
+        img {
+          height: 260px;
+        }
+      }
+    }
+
+    @include mediumScreen {
+      h2 {
+        display: none;
       }
     }
   }
