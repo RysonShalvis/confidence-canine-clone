@@ -13,11 +13,8 @@
 
     video {
       width: 100%;
-
-      @include mediumScreen {
-        object-fit: cover;
-        height: 100%;
-      }
+      object-fit: cover;
+      height: 100%;
     }
   }
 
@@ -42,7 +39,7 @@
     align-items: center;
     z-index: 10;
 
-    @include largeScreen {
+    @include xlScreen {
       flex-direction: column;
       justify-content: center;
       height: 100%;
@@ -73,7 +70,7 @@
 
     @include smallScreen {
       flex-direction: column;
-      align-items: end;
+      align-items: flex-end;
 
       h2 {
         display: none;
@@ -96,7 +93,7 @@
     .left-side-logo {
       display: flex;
       flex-direction: column;
-      align-items: end;
+      align-items: flex-end;
     }
 
     .right-side-logo {
@@ -111,8 +108,6 @@
       border-radius: 100%;
       background: black;
       overflow: hidden;
-
-     
 
       img {
         object-position: -5px -5px;
@@ -129,7 +124,7 @@
       }
     }
 
-    @include mediumScreen {
+    @include largeScreen {
       h2 {
         display: none;
       }

@@ -37,7 +37,7 @@ function HomePage() {
           <h2>LEADERSHIP</h2>
         </div>
         <div className="logo-container">
-          <img src={logo} />
+          <img alt="confidence canine logo" src={logo} />
         </div>
         <div className="right-side-logo">
           <h2>CANINE CONFIDENCE</h2>

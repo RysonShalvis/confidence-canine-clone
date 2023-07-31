@@ -8,12 +8,19 @@ $subHeaderFont: 40px;
 $largeTextFont: 30px;
 $textFont: 20px;
 
-$largeScreenPixel: 1240px;
+$xlScreenPixel: 1240px;
+$largeScreenPixel: 1023px;
 $mediumScreenPixel: 700px;
 $smallScreenPixel: 480px;
 
+@mixin xlScreen {
+  @media screen and (min-width: $xlScreenPixel) {
+    @content;
+  }
+}
+
 @mixin largeScreen {
-  @media screen and (min-width: $largeScreenPixel) {
+  @media screen and (max-width: $xlScreenPixel) {
     @content;
   }
 }
@@ -31,7 +38,7 @@ $smallScreenPixel: 480px;
 }
 
 @mixin xsScreen {
-    @media screen and (max-width: $smallScreenPixel) {
-      @content;
-    }
+  @media screen and (max-width: $smallScreenPixel) {
+    @content;
   }
+}
