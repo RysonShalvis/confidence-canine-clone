@@ -9,6 +9,15 @@
     margin: $spacing;
   }
 
+  a {
+    outline: none;
+    text-decoration: none;
+
+    &:visited {
+      color: inherit;
+    }
+  }
+
   * {
     font-family: "Alegreya SC", serif;
   }

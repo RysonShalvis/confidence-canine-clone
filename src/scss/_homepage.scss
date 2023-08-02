@@ -35,15 +35,68 @@
     font-size: $textFont;
     font-weight: 500;
     width: 100%;
-    justify-content: flex-end;
-    align-items: center;
     z-index: 10;
 
+    .nav-item-container {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+
+      @include mediumScreen {
+      }
+
+      @include xlScreen {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      @include smallScreen {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: all ease-in-out 250ms;
+        align-items: flex-end;
+        pointer-events: none;
+
+        &.active {
+          opacity: 1;
+          transform: translateY(0);
+          pointer-events: all;
+        }
+      }
+
+      & > a {
+        padding: $spacing;
+        margin: 0;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        outline: none;
+        text-decoration: none;
+        color: $textColor;
+
+        &:hover,
+        &:active,
+        &:focus {
+          border: 2px solid $secondaryColor;
+        }
+
+        a {
+          text-decoration: none;
+          outline: none;
+
+          &:visited, &:hover, &:active {
+            color: inherit;
+          }
+        }
+      }
+    }
+
     @include xlScreen {
-      flex-direction: column;
-      justify-content: center;
       height: 100%;
       width: fit-content;
+      justify-content: center;
     }
 
     .hamburger-menu {
@@ -71,14 +124,6 @@
     @include smallScreen {
       flex-direction: column;
       align-items: flex-end;
-
-      h2 {
-        display: none;
-
-        &.display {
-          display: block;
-        }
-      }
     }
   }
 
@@ -125,7 +170,7 @@
     }
 
     @include largeScreen {
-      h2 {
+    a {
         display: none;
       }
     }

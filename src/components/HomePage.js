@@ -5,10 +5,13 @@ import "../scss/_homepage.scss";
 import { useState } from "react";
 
 function HomePage() {
-  const [navClassNames, setNavClassnames] = useState('');
+  const classnames = ["nav-item-container"];
+  const [navClassNames, setNavClassnames] = useState(classnames);
 
   const menuOnclick = () => {
-    navClassNames ? setNavClassnames('') : setNavClassnames('display');
+    navClassNames.includes("active")
+      ? setNavClassnames(classnames)
+      : setNavClassnames([...classnames, "active"]);
   };
 
   return (
@@ -20,28 +23,38 @@ function HomePage() {
       <div className="background-gradient"></div>
 
       <div className="side-nav">
-        <button onClick={menuOnclick} className="hamburger-menu">
+        <button tabIndex="0" onClick={menuOnclick} className="hamburger-menu">
           <div></div>
           <div></div>
           <div></div>
         </button>
-        <h2 className={navClassNames}>TRAINING</h2>
-        <h2 className={navClassNames}>PROGRAM</h2>
-        <h2 className={navClassNames}>REVIEWS</h2>
-        <h2 className={navClassNames}>CONTACT</h2>
+        <div className={navClassNames.toString().replace(",", " ")}>
+          <a href="#" tabIndex="1">
+            TRAINING
+          </a>
+          <a href="#" tabIndex="2">
+            PROGRAM
+          </a>
+          <a href="#" tabIndex="3">
+            REVIEWS
+          </a>
+          <a href="#" tabIndex="4">
+            CONTACT
+          </a>
+        </div>
       </div>
 
       <div className="main-content">
         <div className="left-side-logo">
-          <h2>OWNER CONFIDENCE</h2>
-          <h2>LEADERSHIP</h2>
+          <h2 tabIndex="5">OWNER CONFIDENCE</h2>
+          <h2 tabIndex="6">LEADERSHIP</h2>
         </div>
         <div className="logo-container">
-          <img alt="confidence canine logo" src={logo} />
+          <img tabIndex="7" alt="confidence canine" src={logo} />
         </div>
         <div className="right-side-logo">
-          <h2>CANINE CONFIDENCE</h2>
-          <h2>TEAMWORK</h2>
+          <h2 tabIndex="8">CANINE CONFIDENCE</h2>
+          <h2 tabIndex="9">TEAMWORK</h2>
         </div>
       </div>
     </div>
