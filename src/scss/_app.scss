@@ -4,9 +4,12 @@
   background-color: $backgroundColor;
 
   h1,
-  h2,
-  p {
+  h2 {
     margin: $spacing;
+  }
+
+  p {
+    line-height: 30px;
   }
 
   a {
