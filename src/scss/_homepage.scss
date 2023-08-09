@@ -176,5 +176,11 @@
         display: none;
       }
     }
+
+    @include mediumScreen {
+      h2 {
+        display: none;
+      }
+    }
   }
 }

@@ -17,8 +17,9 @@
     width: 80%;
     max-width: 1200px;
 
-    @include smallScreen {
+    @include mediumScreen {
       width: 100%;
+      padding: 12px;
     }
 
     p {
@@ -41,6 +42,16 @@
     p:last-child {
       align-self: flex-end;
       font-size: $subHeaderFont;
+    }
+
+    @include smallScreen {
+      p:not(p:last-child) {
+        font-size: $subHeaderFont;
+      }
+
+      p:last-child {
+        font-size: $largeTextFont;
+      }
     }
   }
 }

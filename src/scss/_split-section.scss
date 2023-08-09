@@ -15,9 +15,21 @@
     }
   }
 
+  @include smallScreen {
+    flex-direction: column-reverse;
+
+    &.image-left {
+      flex-direction: column-reverse;
+    }
+  }
+
   .text-section {
     width: 45%;
     padding: 0 48px;
+
+    @include smallScreen {
+      width: 100%;
+    }
 
     .top-bar {
       > div {
@@ -65,11 +77,19 @@
     position: relative;
     width: 55%;
 
+    @include smallScreen {
+      width: 100%;
+    }
+
     .background-gradient {
       position: absolute;
       width: 25%;
       height: 100%;
       background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+
+      @include smallScreen {
+        display: none;
+      }
     }
 
     video {
