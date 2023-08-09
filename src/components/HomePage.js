@@ -3,10 +3,14 @@ import backgroundVideo from "../media/dog-wind-homepage.mp4";
 import logo from "../media/canine-logo.jpeg";
 import "../scss/_homepage.scss";
 import { useState } from "react";
+import { useTransitionOnce } from "../util/util";
 
 function HomePage() {
   const classnames = ["nav-item-container"];
   const [navClassNames, setNavClassnames] = useState(classnames);
+
+  const [addSidenavClassNames, sideNavRef] = useTransitionOnce("side-nav");
+  const [addMainContentClassNames, mainContentRef] = useTransitionOnce("main-content");
 
   const menuOnclick = () => {
     navClassNames.includes("active")
@@ -22,7 +26,7 @@ function HomePage() {
 
       <div className="background-gradient"></div>
 
-      <div className="side-nav">
+      <div ref={sideNavRef} className={addSidenavClassNames}>
         <button tabIndex="0" onClick={menuOnclick} className="hamburger-menu">
           <div></div>
           <div></div>
@@ -44,7 +48,10 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="main-content">
+      <div
+        ref={mainContentRef}
+        className={addMainContentClassNames}
+      >
         <div className="left-side-logo">
           <h2 tabIndex="5">OWNER CONFIDENCE</h2>
           <h2 tabIndex="6">LEADERSHIP</h2>

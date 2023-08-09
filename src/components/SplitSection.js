@@ -1,11 +1,14 @@
 import React from "react";
 import "../scss/_split-section.scss";
 import Button from "./Button";
+import { useTransitionOnce } from "../util/util";
 
 const SplitSection = ({ header, subheader, children, video, imageLeft }) => {
+  const [addClassNames, ref] = useTransitionOnce("text-section");
+
   return (
     <div className={`split-section ${imageLeft ? "image-left" : ""}`}>
-      <div className="text-section">
+      <div ref={ref} className={addClassNames}>
         <div className="top-bar">
           <div></div>
           <div></div>

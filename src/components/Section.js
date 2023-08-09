@@ -1,10 +1,12 @@
 import React from "react";
 import "../scss/_section.scss";
-import { useState, useRef } from "react";
+import { useTransitionOnce } from "../util/util";
 
 const Section = () => {
+  const [addClassNames, ref] = useTransitionOnce("section");
+
   return (
-    <div className="section">
+    <div ref={ref} className={addClassNames}>
       <div className="section-quote-container">
         <p>"WHATEVER IS WORTH DOING</p>
         <p>IS WORTH DOING WELL."</p>
