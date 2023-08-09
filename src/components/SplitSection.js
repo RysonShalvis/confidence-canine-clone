@@ -1,9 +1,10 @@
 import React from "react";
 import "../scss/_split-section.scss";
+import Button from "./Button";
 
 const SplitSection = ({ header, subheader, children, video, imageLeft }) => {
   return (
-    <div className={`split-section ${imageLeft ? "image-left": ''}`}>
+    <div className={`split-section ${imageLeft ? "image-left" : ""}`}>
       <div className="text-section">
         <div className="top-bar">
           <div></div>
@@ -12,6 +13,9 @@ const SplitSection = ({ header, subheader, children, video, imageLeft }) => {
         <h2 className="title">{header}</h2>
         <h3 className="subtitle">{subheader}</h3>
         <div className="body">{children}</div>
+        <div className="split-section-button-container">
+          <Button link="#">Learn More</Button>
+        </div>
       </div>
 
       <div className="video-section">

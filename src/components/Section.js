@@ -1,5 +1,6 @@
 import React from "react";
 import "../scss/_section.scss";
+import { useState, useRef } from "react";
 
 const Section = () => {
   return (

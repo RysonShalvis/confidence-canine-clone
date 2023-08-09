@@ -1,5 +1,6 @@
 import "../scss/_app.scss";
 import "../scss/_reset.scss";
+import "../scss/_transition.scss";
 import HomePage from "./HomePage";
 import Section from "./Section";
 import Daycare from "./Daycare";

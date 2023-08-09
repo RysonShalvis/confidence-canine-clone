@@ -86,7 +86,9 @@
           text-decoration: none;
           outline: none;
 
-          &:visited, &:hover, &:active {
+          &:visited,
+          &:hover,
+          &:active {
             color: inherit;
           }
         }
@@ -170,7 +172,7 @@
     }
 
     @include largeScreen {
-    a {
+      a {
         display: none;
       }
     }

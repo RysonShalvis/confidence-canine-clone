@@ -1,0 +1,9 @@
+@import "./variables";
+
+.app .button {
+  padding: 10px 15px;
+  background-color: $secondaryColor;
+  border-radius: 15px;
+  font-size: $largeTextFont;
+  border: none;
+}
