@@ -10,7 +10,8 @@ function HomePage() {
   const [navClassNames, setNavClassnames] = useState(classnames);
 
   const [addSidenavClassNames, sideNavRef] = useTransitionOnce("side-nav");
-  const [addMainContentClassNames, mainContentRef] = useTransitionOnce("main-content");
+  const [addMainContentClassNames, mainContentRef] =
+    useTransitionOnce("main-content");
 
   const menuOnclick = () => {
     navClassNames.includes("active")
@@ -48,10 +49,7 @@ function HomePage() {
         </div>
       </div>
 
-      <div
-        ref={mainContentRef}
-        className={addMainContentClassNames}
-      >
+      <div ref={mainContentRef} className={addMainContentClassNames}>
         <div className="left-side-logo">
           <h2 tabIndex="5">OWNER CONFIDENCE</h2>
           <h2 tabIndex="6">LEADERSHIP</h2>
