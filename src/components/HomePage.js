@@ -1,6 +1,6 @@
 import React from "react";
 import backgroundVideo from "../media/dog-wind-homepage.mp4";
-import logo from "../media/canine-logo.jpeg";
+import logo from "../media/cc-logo.webp";
 import "../scss/_homepage.scss";
 import { useState } from "react";
 import { useTransitionOnce } from "../util/util";

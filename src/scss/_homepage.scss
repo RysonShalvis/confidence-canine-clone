@@ -149,22 +149,11 @@
     }
 
     .logo-container {
-      background-color: black;
-      height: 340px;
-      width: 340px;
-      border-radius: 100%;
-      background: black;
-      overflow: hidden;
-
       img {
-        object-position: -5px -5px;
         height: 350px;
       }
 
       @include smallScreen {
-        height: 250px;
-        width: 250px;
-
         img {
           height: 260px;
         }

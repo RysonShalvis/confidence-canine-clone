@@ -7,9 +7,14 @@ const Daycare = () => {
   const subHeader = "A COZY IN HOME EXPERIENCE.";
 
   return (
-    <SplitSection imageLeft header={header} subheader={subHeader} video={daycareVideo}>
+    <SplitSection
+      imageLeft
+      header={header}
+      subheader={subHeader}
+      video={daycareVideo}
+    >
       <p>
-        ...With lots of outdoor play. Leave your pet in confindence in the home
+        ...With lots of outdoor play. Leave your pet in confidence in the home
         of a dog trainer well-versed in challenging dog behaviors. Expect
         professional hands on, watchful pet-sitting while you're away. All dogs
         are constantly supervised so you can relax and leave rest assured that
