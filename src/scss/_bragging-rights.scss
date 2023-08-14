@@ -5,11 +5,19 @@
   align-items: center;
   margin-top: 24px;
 
+  @include smallScreen {
+    flex-direction: column;
+  }
+
   .section-container {
     text-align: center;
 
     .bragging-rights-section {
       height: 220px;
+
+      @include xsScreen {
+        height: 300px;
+      }
     }
 
     h2 {
@@ -23,11 +31,15 @@
     }
   }
 
-  .logo-container {
+  .image-container {
     text-align: center;
 
     img {
       height: 350px;
+    }
+
+    @include largeScreen {
+      display: none;
     }
   }
 }

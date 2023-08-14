@@ -56,6 +56,10 @@
       color: $textColor;
       font-size: $headerFont;
       margin: 24px 0;
+
+      @include xsScreen {
+        font-size: $subHeaderFont;
+      }
     }
 
     .body {
