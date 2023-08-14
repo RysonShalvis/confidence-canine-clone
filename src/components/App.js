@@ -5,6 +5,7 @@ import HomePage from "./HomePage";
 import Section from "./Section";
 import Daycare from "./Daycare";
 import Training from "./Training";
+import BraggingRights from "./BraggingRights";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Section />
       <Daycare />
       <Training />
+      <BraggingRights />
     </div>
   );
 }
