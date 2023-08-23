@@ -6,6 +6,7 @@ import Section from "./Section";
 import Daycare from "./Daycare";
 import Training from "./Training";
 import BraggingRights from "./BraggingRights";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Daycare />
       <Training />
       <BraggingRights />
+      <Footer />
     </div>
   );
 }
