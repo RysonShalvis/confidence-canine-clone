@@ -1,0 +1,26 @@
+@import "./variables";
+
+.quote-card-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 48px;
+}
+
+.quote-card {
+  margin: $spacing;
+  padding: $spacing;
+  background-color: $backgroundColor;
+  border-radius: 8px;
+  color: $textColor;
+  position: relative;
+}
+
+.quote-background-video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  video {
+    width: 100%;
+  }
+}

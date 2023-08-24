@@ -7,6 +7,8 @@ import Daycare from "./Daycare";
 import Training from "./Training";
 import BraggingRights from "./BraggingRights";
 import Footer from "./Footer";
+import QuoteCardSection from "./QuoteCardSection";
+import QuoteBackgroundVideo from "./QuoteBackgroundVideo";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Daycare />
       <Training />
       <BraggingRights />
+      <QuoteBackgroundVideo />
+      <QuoteCardSection />
       <Footer />
     </div>
   );
